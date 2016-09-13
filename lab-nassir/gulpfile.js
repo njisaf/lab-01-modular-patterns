@@ -8,9 +8,9 @@ gulp.task('hello', function(){
   console.log('hello');
 });
 
-gulp.watch('***/*.js', ['hello']); //if any .js files change, hello will run
+gulp.watch('***/*.js', ['hello']);
 
-gulp.task('lint', () => { //taken from gulp-eslint docs
+gulp.task('lint', function () {
   return gulp.src()
       .pipe(eslint())
       .pipe(eslint.format())
