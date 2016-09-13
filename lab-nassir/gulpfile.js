@@ -11,7 +11,7 @@ gulp.task('hello', function(){
 gulp.watch('***/*.js', ['hello']);
 
 gulp.task('lint', function () {
-  return gulp.src()
+  return gulp.src(['**/*.js','!node_modules/**'])
       .pipe(eslint())
       .pipe(eslint.format())
       .pipe(eslint.failAfterError());
